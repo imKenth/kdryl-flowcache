@@ -1,5 +1,5 @@
 import { useCallback } from 'react'
-import { ArrowLeft, BarChart3, Cpu, Sparkles } from 'lucide-react'
+import { ArrowLeft, BarChart3 } from 'lucide-react'
 import { useSimulator } from '../hooks/useSimulator'
 import InputPanel from '../components/InputPanel'
 import Controls from '../components/Controls'
