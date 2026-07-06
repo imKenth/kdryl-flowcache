@@ -32,6 +32,7 @@
 ## Getting Started
 
 ```bash
+Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process
 npm install
 npm run dev
 ```
