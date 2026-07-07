@@ -59,7 +59,6 @@ export default function Visualizer() {
         onInputStringChange={sim.setInputString}
         onStart={handleStart}
         onReset={sim.reset}
-        onSpeedChange={sim.setSpeed}
       />
 
       <Controls
@@ -71,6 +70,7 @@ export default function Visualizer() {
         onBack={sim.stepBackward}
         onForward={sim.stepForward}
         onTogglePlay={sim.togglePlay}
+        onSpeedChange={sim.setSpeed}
       />
 
       {sim.hasRun && sim.steps.length > 0 && (

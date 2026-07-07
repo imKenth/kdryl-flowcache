@@ -1,0 +1,11 @@
+FlowCache local startup
+=======================
+
+Windows users can simply double-click start.bat.
+
+If you prefer the terminal:
+1. Open Command Prompt in this folder.
+2. Run: npm install
+3. Run: npm run dev
+
+Then open: http://localhost:5173

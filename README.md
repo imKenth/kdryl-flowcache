@@ -31,10 +31,13 @@
 
 ## Getting Started
 
-```bash
+If you downloaded this project as a ZIP from GitHub, do this first:
 
-install node.js latest
-Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process
+1. Install Node.js from https://nodejs.org/
+2. Open the project folder
+3. Double-click start.bat on Windows, or run the commands below in a terminal
+
+```bash
 npm install
 npm run dev
 ```
