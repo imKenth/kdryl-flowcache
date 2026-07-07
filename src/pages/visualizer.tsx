@@ -17,7 +17,7 @@ export default function Visualizer() {
   /** Start simulation and immediately begin auto-play */
   const handleStart = useCallback(() => {
     sim.runSimulation()
-    setTimeout(() => sim.togglePlay(), 50)
+    setTimeout(() => sim.togglePlay(), )
   }, [sim.runSimulation, sim.togglePlay])
 
   return (

@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "prebuild": "node scripts/check-deps.cjs",
+    "presentation:check": "git status --short && echo 'Use: git diff'",
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",

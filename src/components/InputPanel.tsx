@@ -63,7 +63,7 @@ export default function InputPanel({
               type="text"
               value={inputString}
               onChange={e => onInputStringChange(e.target.value)}
-              placeholder="e.g. 1,2,3,4,1,2,5"
+              placeholder="e.g. 1 2 3 4 1 2 5"
               className={inputBase}
               disabled={hasRun}
             />

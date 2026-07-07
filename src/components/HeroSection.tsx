@@ -28,9 +28,9 @@ export default function Hero() {
               </div>
 
               <h1 className="heading-font text-4xl font-semibold leading-tight text-white sm:text-5xl lg:text-6xl">
-                Visualize cache replacement
+                Visualize cache
                 <span className="block bg-gradient-to-r from-violet-300 via-violet-400 to-fuchsia-300 bg-clip-text text-transparent">
-                  like a premium product experience.
+                  cache replacement
                 </span>
               </h1>
 
@@ -72,8 +72,8 @@ export default function Hero() {
                 </div>
                 <div className="space-y-4">
                   {[
-                    { label: 'Faults', value: '10', icon: Cpu },
-                    { label: 'Hits', value: '10', icon: BarChart3 },
+                    { label: 'Faults', value: '6', icon: Cpu },
+                    { label: 'Hits', value: '9', icon: BarChart3 },
                   ].map(({ label, value, icon: Icon }) => (
                     <div key={label} className="flex items-center justify-between rounded-2xl border border-white/10 bg-white/8 px-4 py-3">
                       <div className="flex items-center gap-3">

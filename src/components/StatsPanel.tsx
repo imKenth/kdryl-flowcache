@@ -1,4 +1,4 @@
-import { Activity, ArrowUpRight, Download, TrendingUp } from 'lucide-react'
+import { Activity, ArrowUpRight, BarChart3, Cpu, Download } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { formatPercent } from '../utils/helpers'
 
@@ -16,8 +16,8 @@ export default function StatsPanel({ totalFaults, totalHits, hitRatio, faultRati
   if (!hasRun) return null
 
   const statCards = [
-    { label: 'Total Faults', value: totalFaults, accent: 'from-rose-500/25 to-rose-500/10', text: 'text-rose-200', icon: Activity },
-    { label: 'Total Hits', value: totalHits, accent: 'from-emerald-500/25 to-emerald-500/10', text: 'text-emerald-200', icon: TrendingUp },
+    { label: 'Total Faults', value: totalFaults, accent: 'from-rose-500/25 to-rose-500/10', text: 'text-rose-200', icon: Cpu },
+    { label: 'Total Hits', value: totalHits, accent: 'from-emerald-500/25 to-emerald-500/10', text: 'text-emerald-200', icon: BarChart3 },
     { label: 'Hit Ratio', value: formatPercent(Number(hitRatio)), accent: 'from-violet-500/25 to-violet-500/10', text: 'text-violet-200', icon: ArrowUpRight },
     { label: 'Fault Ratio', value: formatPercent(Number(faultRatio)), accent: 'from-amber-500/25 to-amber-500/10', text: 'text-amber-200', icon: Activity },
   ]
