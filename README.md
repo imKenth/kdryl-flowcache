@@ -32,6 +32,8 @@
 ## Getting Started
 
 ```bash
+
+install node.js latest
 Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process
 npm install
 npm run dev
