@@ -28,7 +28,7 @@ export default function Hero() {
               </div>
 
               <h1 className="heading-font text-4xl font-semibold leading-tight text-white sm:text-5xl lg:text-6xl">
-                Visualize cache
+                Visualize
                 <span className="block bg-gradient-to-r from-violet-300 via-violet-400 to-fuchsia-300 bg-clip-text text-transparent">
                   cache replacement
                 </span>
