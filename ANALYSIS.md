@@ -663,18 +663,4 @@ console.assert(steps.every(s => s.frames.length === frameSize), 'Frame count mis
 
 ---
 
-## 8. QUESTIONS TO TEST YOURSELF
 
-**Q1**: Why does `simulateFIFO` use `frames.indexOf(page)` to check for a hit, but `simulateLRU` uses `frames.includes(page)`? What's the difference?
-
-**Q2**: The `useSimulator` hook returns `SimulatorState & SimulatorActions`. What does the `&` (intersection) operator mean in TypeScript? What would happen if you used `|` (union) instead?
-
-**Q3**: In `Visualizer.tsx`, the `<Controls>` component receives `currentStep` and `totalSteps`. Why does `Controls` return `null` early when `!hasRun || totalSteps === 0`? What would happen if it didn't have this guard?
-
-**Q4**: Trace `simulateLRU` with input `["A","B","A","C","B"]` and `frameSize = 2`. Write down the frames and fault/hit status after each step. (Check your answer: step 4 should evict "B", not "A". Why?)
-
-**Q5**: The speed slider in `Controls.tsx` uses `value={1500 - speed + 100}`. If `speed = 300ms`, what slider position does this produce? If the slider is at `1300`, what speed does `1500 - 1300 + 100` give you? Why is this inversion necessary?
-
-**Q6**: Look at `useSimulator.ts:85-104`. The `useEffect` depends on `[isPlaying, speed, steps.length]`. What would happen if you removed `steps.length` from the dependency array?
-
-**Q7**: In `FrameGrid.tsx`, the line `const isHighlighted = highlightedFault !== null && highlightedFault === colIdx && step.changedIndex === frameIdx`. Why does it check both `highlightedFault === colIdx` AND `step.changedIndex === frameIdx`? What would happen with only one condition?
