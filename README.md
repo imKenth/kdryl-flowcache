@@ -38,6 +38,8 @@ If you downloaded this project as a ZIP from GitHub, do this first:
 3. Double-click start.bat on Windows, or run the commands below in a terminal
 
 ```bash
+Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process
+
 npm install
 npm run dev
 ```
