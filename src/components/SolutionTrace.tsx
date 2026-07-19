@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Copy, Download, Search, PanelRightClose, PanelRightOpen } from 'lucide-react'
+import { Search, PanelRightClose, PanelRightOpen } from 'lucide-react'
 import type { Algorithm, SimulationStep } from '../types'
 import { buildTrace, buildTraceLRU } from '../logic/fifo-lru'
 import { cardBase } from '../utils/helpers'

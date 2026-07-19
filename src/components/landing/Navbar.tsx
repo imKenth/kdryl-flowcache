@@ -1,20 +1,30 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
 import { Menu, Sparkles, X } from 'lucide-react'
 import Button from '../ui/Button'
 
-/** Navigation links for the landing page sections */
 const links = [
   { label: 'Features', id: 'features' },
   { label: 'How It Works', id: 'how-it-works' },
 ]
 
-/** Responsive navbar with smooth-scroll navigation and mobile hamburger menu */
 export default function Navbar() {
   const [open, setOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+  const lastY = useRef(0)
   const navigate = useNavigate()
   const location = useLocation()
   const isVisualizer = location.pathname === '/visualizer'
+
+  useEffect(() => {
+    function onScroll() {
+      const y = window.scrollY
+      setScrolled(y > 20)
+      lastY.current = y
+    }
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
 
   function scrollTo(id: string) {
     if (location.pathname !== '/') {
@@ -26,12 +36,12 @@ export default function Navbar() {
   }
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-[#09090b]/70 backdrop-blur-2xl">
+    <header className={`fixed top-0 left-0 z-50 w-full transition-all duration-500 ${scrolled ? 'border-b border-white/10 bg-[#09090b] shadow-[0_4px_30px_rgba(0,0,0,0.3)] backdrop-blur-2xl' : 'bg-transparent'}`}>
       <div className={`mx-auto flex max-w-7xl items-center px-6 py-4 lg:px-8 ${isVisualizer ? 'justify-center' : 'justify-between'}`}>
         <a href="/" className="flex items-center gap-2 text-lg font-semibold tracking-tight text-white">
-          <span className="flex h-9 w-9 items-center justify-center rounded-2xl border border-violet-400/40 bg-gradient-to-br from-violet-500/30 to-fuchsia-500/20 shadow-[0_0_24px_rgba(124,58,237,0.25)]">
-            <Sparkles size={16} className="text-violet-200" />
-          </span>
+          <div className={`flex h-9 w-9 items-center justify-center rounded-2xl border bg-gradient-to-br transition-all duration-500 ${scrolled ? 'border-violet-400/40 from-violet-500/30 to-fuchsia-500/20 shadow-[0_0_24px_rgba(124,58,237,0.25)]' : 'border-transparent from-transparent to-transparent'}`}>
+            <Sparkles size={16} className={`transition-all duration-500 ${scrolled ? 'text-violet-200' : 'text-white'}`} />
+          </div>
           <span className="heading-font">Flow<span className="text-violet-300">Cache</span></span>
         </a>
 
@@ -42,7 +52,7 @@ export default function Navbar() {
                 <button
                   key={link.id}
                   onClick={() => scrollTo(link.id)}
-                  className="text-sm font-medium text-slate-300 transition-colors hover:text-white"
+                  className={`text-sm font-medium transition-all duration-500 ${scrolled ? 'text-slate-300' : 'text-white'}`}
                 >
                   {link.label}
                 </button>

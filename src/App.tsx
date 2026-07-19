@@ -131,10 +131,12 @@ function App() {
   return (
     <div className="min-h-screen overflow-x-hidden bg-transparent text-slate-100">
       <Navbar />
+      <div className="pt-[68px]">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/visualizer" element={<Visualizer />} />
       </Routes>
+      </div>
     </div>
   )
 }

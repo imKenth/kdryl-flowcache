@@ -1,4 +1,4 @@
-import { Activity, ArrowUpRight, BarChart3, Cpu, Download } from 'lucide-react'
+import { Activity, ArrowUpRight, BarChart3, Cpu } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { formatPercent } from '../utils/helpers'
 
@@ -12,7 +12,7 @@ interface StatsPanelProps {
 }
 
 /** Summary statistics panel showing fault/hit counts and ratios, plus CSV export */
-export default function StatsPanel({ totalFaults, totalHits, hitRatio, faultRatio, hasRun, onExportCSV }: StatsPanelProps) {
+export default function StatsPanel({ totalFaults, totalHits, hitRatio, faultRatio, hasRun, }: StatsPanelProps) {
   if (!hasRun) return null
 
   const statCards = [
