@@ -41,8 +41,8 @@ export default function SolutionTrace({ steps, currentStep, frameSize, algorithm
               <Search size={14} />
               <input value={search} onChange={e => setSearch(e.target.value)} className="bg-transparent outline-none placeholder:text-slate-500" placeholder="Search" />
             </label>
-            <button className="rounded-2xl border border-white/10 bg-white/8 p-2 text-slate-300 hover:text-white"><Copy size={14} /></button>
-            <button className="rounded-2xl border border-white/10 bg-white/8 p-2 text-slate-300 hover:text-white"><Download size={14} /></button>
+            {/* <button className="rounded-2xl border border-white/10 bg-white/8 p-2 text-slate-300 hover:text-white"><Copy size={14} /></button>
+            <button className="rounded-2xl border border-white/10 bg-white/8 p-2 text-slate-300 hover:text-white"><Download size={14} /></button> */}
             <button onClick={() => setCollapsed(!collapsed)} className="rounded-2xl border border-white/10 bg-white/8 p-2 text-slate-300 hover:text-white">
               {collapsed ? <PanelRightOpen size={14} /> : <PanelRightClose size={14} />}
             </button>
@@ -126,8 +126,8 @@ export default function SolutionTrace({ steps, currentStep, frameSize, algorithm
             <Search size={14} />
             <input value={search} onChange={e => setSearch(e.target.value)} className="bg-transparent outline-none placeholder:text-slate-500" placeholder="Search" />
           </label>
-          <button className="rounded-2xl border border-white/10 bg-white/8 p-2 text-slate-300 hover:text-white"><Copy size={14} /></button>
-          <button className="rounded-2xl border border-white/10 bg-white/8 p-2 text-slate-300 hover:text-white"><Download size={14} /></button>
+          {/* <button className="rounded-2xl border border-white/10 bg-white/8 p-2 text-slate-300 hover:text-white"><Copy size={14} /></button>
+          <button className="rounded-2xl border border-white/10 bg-white/8 p-2 text-slate-300 hover:text-white"><Download size={14} /></button> */}
           <button onClick={() => setCollapsed(!collapsed)} className="rounded-2xl border border-white/10 bg-white/8 p-2 text-slate-300 hover:text-white">
             {collapsed ? <PanelRightOpen size={14} /> : <PanelRightClose size={14} />}
           </button>

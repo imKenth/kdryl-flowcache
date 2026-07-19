@@ -27,12 +27,12 @@ export default function StatsPanel({ totalFaults, totalHits, hitRatio, faultRati
       <div className="mb-4 flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
         <div>
           <h2 className="text-sm font-semibold text-white">Performance Snapshot</h2>
-          <p className="text-sm text-slate-400">A premium view of runtime outcomes.</p>
+          <p className="text-sm text-slate-400">A quick view of runtime outcomes.</p>
         </div>
-        <button onClick={onExportCSV} className="flex items-center justify-center gap-2 rounded-2xl border border-white/10 bg-white/8 px-3 py-2 text-sm text-slate-300 transition-colors hover:text-white sm:self-start">
+        {/* <button onClick={onExportCSV} className="flex items-center justify-center gap-2 rounded-2xl border border-white/10 bg-white/8 px-3 py-2 text-sm text-slate-300 transition-colors hover:text-white sm:self-start">
           <Download size={14} />
           Export CSV
-        </button>
+        </button> */}
       </div>
 
       <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-1">
